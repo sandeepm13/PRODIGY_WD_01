@@ -1,0 +1,197 @@
+/* Navigation Bar Styles */
+.navbar {
+    height: 60px;
+    background-color: #34495E; 
+    color: #ECF0F1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; 
+    animation: navbarFadeIn 1.2s ease-in-out forwards; 
+}
+
+/* Keyframes for navbar fade-in */
+@keyframes navbarFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);  
+    }
+}
+
+/* Navbar Link Styles */
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 15px; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
+    opacity: 0; 
+    transform: translateY(-20px) scale(0.95); 
+    animation: linkFadeIn 1s ease-in-out forwards;
+}
+
+/* Keyframes for link fade-in */
+@keyframes linkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); 
+    }
+}
+
+.navbar a:hover {
+    background-color: #2C3E50; 
+    border-radius: 4px;
+    transform: scale(1.05); 
+}
+
+.navbar a:active {
+    background-color: #1ABC9C; 
+}
+
+/* Delay each link animation for staggered effect */
+.navbar a:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.navbar a:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.navbar a:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.navbar a:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.navbar a:nth-child(5) {
+    animation-delay: 1.1s;
+}
+
+.navbar a:nth-child(6) {
+    animation-delay: 1.3s;
+}
+
+/* Icon Size Adjustments */
+.home i, .categories i, .services i {
+    font-size: 30px;
+}
+
+.about i, .contact i, .more i {
+    font-size: 25px;
+}
+
+/* Display Class Styles */
+.display {
+    display: flex;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+.display:hover {
+    border-radius: 2px;
+    border-color: #ECF0F1;
+    border-style: solid;
+    background-color: #E74C3C; 
+}
+
+.display:active {
+    background-color: #27AE60; 
+}
+
+/* Call to Action Button Styles */
+.ctag {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ABC9C;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; 
+}
+.ctag:hover {
+    background-color: #16A085; 
+}
+
+/* Section Styles */
+#home, #categories, #about, #services, #contact, #more {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 40px;
+    transition: background-color 0.5s ease-in-out; 
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: sectionFadeIn 1.2s ease-in-out forwards; 
+}
+
+/* Keyframes for section fade-in */
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+/* Staggered effect for sections */
+#home {
+    background-color: #006769;
+    animation-delay: 0.5s;
+}
+
+#categories {
+    background-color: #2980B9;
+    animation-delay: 1s;
+}
+
+#about {
+    background-color: #3498DB;
+    animation-delay: 1.5s;
+}
+
+#services {
+    background-color: #1ABC9C;
+    animation-delay: 2s;
+}
+
+#contact {
+    background-color: #16A085;
+    animation-delay: 2.5s;
+}
+
+#more {
+    background-color: #27AE60;
+    animation-delay: 3s;
+}
+
+/* Initial Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
